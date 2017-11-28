@@ -31,6 +31,16 @@ int & intVector::append(int val)
 
 }
 
+int intVector::operator[](int idx) const
+{
+	return 0;
+}
+
+int & intVector::operator[](int idx)
+{
+	return idx;
+}
+
 bool intVector::grow(size_t minSize)
 {
 	if(minSize <= capacity)

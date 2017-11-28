@@ -10,6 +10,8 @@ public:
 	~intVector();
 	int & at(size_t idx);
 	int& append(int val);
+	int operator[](int idx)const;
+	int&operator[](int idx);
 private:
 	bool grow(size_t minSize);
 	int* dataptr() const;
@@ -18,4 +20,5 @@ private:
 	bool empty() const;
 	int front() const;
 	int back() const;
+
 };
