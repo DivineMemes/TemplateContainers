@@ -27,7 +27,9 @@ T sub(T a, T b)
 template<typename T>
 void swap(T& a, T& b)
 {
-	T temp
+	T temp = a;
+	a = b;
+	b = temp;
 }
 
 template<bool exp>

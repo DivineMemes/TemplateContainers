@@ -12,6 +12,12 @@ public:
 	int& append(int val);
 	int operator[](int idx)const;
 	int&operator[](int idx);
+	void Clear(size_t size);
+	void Erase(int idx);
+	int Count(int value);
+	void Insert(size_t idx, int value);
+	void Reserve(size_t newCapacity);
+	void Compact();
 private:
 	bool grow(size_t minSize);
 	int* dataptr() const;
