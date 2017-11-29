@@ -28,7 +28,7 @@ int & intVector::append(int val)
 	}
 	data[size] = val;
 	++size;
-
+	return val;
 }
 
 int intVector::operator[](int idx) const
@@ -89,12 +89,14 @@ void intVector::Insert(size_t idx, int value)
 
 void intVector::Reserve(size_t newCapacity)
 {
-	assert(newCapacity > capacity);
-	int*newData = new int[newCapacity];
-	memcpy(newData, data, sizeof(int)*size);
-	delete[] data;
-	data = newData;
-	capacity = newCapacity;
+	if (newCapacity > capacity)
+	{
+		int*newData = new int[newCapacity];
+		memcpy(newData, data, sizeof(int)*size);
+		delete[] data;
+		data = newData;
+		capacity = newCapacity;
+	}
 }
 
 void intVector::Compact()
