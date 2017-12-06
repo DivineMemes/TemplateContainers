@@ -9,6 +9,7 @@ public:
 	{
 		int value;
 		intLinkedListNode* next;
+		intLinkedListNode* prev;
 	};
 
 	intLinkedList();
@@ -21,6 +22,11 @@ public:
 	bool empty() const;
 	int front()const;
 	int back()const;
+
+	void clear();
+	void erase(size_t idx);
+	int Count(int value);
+	void insert(size_t idx, int value);
 
 	int operator[](int idx)const;
 	int&operator[](int idx);

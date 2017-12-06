@@ -1,5 +1,7 @@
 #pragma once
-
+#include<cassert>
+#include<cstring>
+#include"iterator.h"
 template<typename T>
 class tVector
 {
@@ -10,6 +12,14 @@ class tVector
 public:
 	tVector();	
 	~tVector();
+	iterator<tVector<T>>begin()
+	{
+		return iterator<tVector<T>>(*this, 0);
+	}
+	iterator<tVector<T>>end()
+	{
+		return iterator<tVector<T>>(*this, size);
+	}
 
 	void insert(size_t idx, T value);
 	void clear();
@@ -31,7 +41,14 @@ public:
 	size_t count(T val) const;
 };
 template<typename T>
-tVector::tVector()
+inline tVector<T>::tVector()
+{
+	capacity = 2;
+	size = 0;
+	data = new T[capacity];
+}
+template<typename T>
+tVector::~tVector()
 {
 	delete[] data;
 }
