@@ -116,9 +116,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithms.h" />
+    <ClInclude Include="HashMap.h" />
     <ClInclude Include="intlinkedlist.h" />
     <ClInclude Include="intvector.h" />
     <ClInclude Include="iterator.h" />
+    <ClInclude Include="KeyHash.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="tvector.h" />
