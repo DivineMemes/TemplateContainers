@@ -58,6 +58,7 @@ public:
 		if (entry == NULL)
 		{
 			entry = new HashNode<K, V>(key, value);
+			
 			if (prev == NULL)
 			{
 				table[hashValue] = entry;
@@ -66,12 +67,14 @@ public:
 			{
 				prev->setNext(entry);
 			}
-		else
-		{
-			entry->setValue(value);
-		}
+			else
+			{
+				entry->setValue(value);
+			}
+
 		}
 	}
+
 	void remove(const K &key) 
 	{
 		unsigned long hashValue = hashFunc(key);

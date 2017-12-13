@@ -110,13 +110,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="HashMapTest.cpp" />
     <ClCompile Include="intlinkedlist.cpp" />
     <ClCompile Include="intvector.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithms.h" />
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="HashMap.h" />
+    <ClInclude Include="HashNode.h" />
     <ClInclude Include="intlinkedlist.h" />
     <ClInclude Include="intvector.h" />
     <ClInclude Include="iterator.h" />
